@@ -101,28 +101,6 @@ The repository includes pre-validated microcontents about cognitive bias. To use
 cd annotation-scripts
 npm install
 node import-to-db.js output/microcontents-real.json
-curl -X POST http://localhost:8080/api/microcontents/embeddings/calculate
-```
-
-## Architecture
-
-```
-Preprocessing (Host):
-  Ollama → annotation-scripts → JSON files
-                                    ↓
-Runtime (Docker):
-  Client → API Gateway → Microservices → MongoDB
-```
-
-- Preprocessing: Offline, uses Ollama for LLM-based annotation
-- Runtime: Always available, uses SBERT for semantic similarity
-
-## Environment Variables
-
-Copy `.env.example` to `.env` and adjust if needed:
-
-```bash
-cp .env.example .env
 ```
 
 Default values work for Docker setup.
