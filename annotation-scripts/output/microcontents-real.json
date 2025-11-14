@@ -1,0 +1,1387 @@
+{
+    "microcontents": [
+      {
+        "identifier": "mc_001",
+        "title": "Understanding Cognitive Bias: Perception, Memory, and Decision-Making",
+        "description": "An educational video exploring the mental mechanisms behind cognitive bias formation, explaining how systematic errors in cognitive processes (memory, perception, information processing) lead to biased decision-making, illustrated through gaming examples and psychological experiments.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=tdNOQ4x2kJY",
+        "source": "YouTube",
+        "duration": "6:26",
+        "language": "en",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "cognitive processing mechanisms",
+          "systematic decision errors",
+          "memory reconstruction bias",
+          "perception distortion",
+          "in-group bias formation",
+          "behavioral psychology patterns"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Acquire knowledge of basic cognitive processes (memory, perception, information processing) involved in bias formation",
+          "Make meaning of how mental mechanisms systematically create errors in human reasoning and decision-making",
+          "Transfer understanding to analyze concrete cases and identify specific cognitive processes responsible for different bias types",
+          "Recognize the unconscious and systematic nature of cognitive bias development in real-world contexts"
+        ],
+        "semanticKeywords": [
+          "cognitive mechanisms",
+          "mental processes",
+          "systematic errors",
+          "bias formation",
+          "memory reconstruction",
+          "perception distortion",
+          "unconscious processing",
+          "decision psychology",
+          "behavioral patterns",
+          "information processing",
+          "cognitive psychology",
+          "reasoning errors"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_002",
+        "title": "Why does the human brain systematically develop cognitive biases during decision-making?",
+        "description": "Explores how basic cognitive processes like memory, attention, and perception create mental shortcuts (heuristics) that lead to systematic thinking errors and cognitive biases in daily decision-making.",
+        "contentType": "audio",
+        "url": "/media/download.wav",
+        "source": "OER Commons",
+        "duration": "01:40",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Verbal"
+        },
+        "primaryConcepts": [
+          "cognitive processes",
+          "heuristics",
+          "availability bias",
+          "confirmation bias",
+          "systematic thinking errors"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Identify the three basic cognitive processes (memory, attention, perception) involved in bias formation",
+          "Explain how heuristics function as mental shortcuts that lead to systematic errors",
+          "Analyze concrete examples of how memory creates availability bias and attention creates confirmation bias",
+          "Interpret the evolutionary purpose of cognitive biases and their modern implications"
+        ],
+        "semanticKeywords": [
+          "cognitive processes",
+          "memory",
+          "attention",
+          "perception",
+          "heuristics",
+          "cognitive biases",
+          "availability bias",
+          "confirmation bias",
+          "decision making",
+          "mental shortcuts",
+          "systematic errors",
+          "evolutionary psychology"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Acquire"]
+      },
+      {
+        "identifier": "mc_003",
+        "title": "Dr. Lisa's Diagnosis: Cognitive Bias Case Study Analysis",
+        "description": "Interactive case study that examines how availability heuristic and confirmation bias influenced a physician's diagnostic process, with reflection questions to analyze cognitive mechanisms autonomously.",
+        "contentType": "case_study",
+        "url": "/media/CognitiveBiasinDecisionMaking.pdf",
+        "source": "Internal",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Processing",
+          "category": "Active"
+        },
+        "primaryConcepts": [
+          "case study analysis",
+          "availability heuristic",
+          "confirmation bias",
+          "selective attention",
+          "diagnostic reasoning",
+          "memory priming"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Analyze real-world scenarios to identify specific cognitive processes at work",
+          "Autonomously recognize how availability heuristic influences professional decision-making",
+          "Evaluate how selective attention and memory priming contribute to confirmation bias",
+          "Propose strategies to mitigate cognitive biases in professional contexts"
+        ],
+        "semanticKeywords": [
+          "case study",
+          "diagnostic reasoning",
+          "availability heuristic",
+          "confirmation bias",
+          "selective attention",
+          "memory priming",
+          "professional judgment",
+          "medical diagnosis",
+          "cognitive analysis",
+          "bias mitigation",
+          "reflection questions",
+          "active learning"
+        ],
+        "primaryLevel": "Transfer",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_004",
+        "title": "The Brain's Decision-Making Toolkit: Complete Guide to Cognitive Bias Mechanisms",
+        "description": "Comprehensive learning document that systematically explains cognitive processes, provides concrete examples like availability bias, and includes practical activities for autonomous analysis of bias formation.",
+        "contentType": "tutorial",
+        "url": "/media/CognitiveBiasesinHumanReasoning.pdf",
+        "source": "AI",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Understanding",
+          "category": "Sequential"
+        },
+        "primaryConcepts": [
+          "heuristics",
+          "selective attention",
+          "memory reconstruction",
+          "availability bias",
+          "systematic bias formation",
+          "energy conservation mechanisms"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Define and differentiate the four core cognitive processes involved in bias formation (heuristics, attention, perception, memory)",
+          "Analyze concrete examples to understand how availability bias emerges from memory limitations and accessibility",
+          "Evaluate systematic factors (energy saving, processing speed, memory constraints) that make biases inevitable",
+          "Apply bias recognition skills to autonomous analysis of professional scenarios like recruitment decisions"
+        ],
+        "semanticKeywords": [
+          "cognitive processes",
+          "heuristics",
+          "availability bias",
+          "selective attention",
+          "memory reconstruction",
+          "systematic biases",
+          "energy conservation",
+          "decision making",
+          "practical examples",
+          "bias mitigation",
+          "professional judgment",
+          "structured learning"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Acquire", "Transfer"]
+      },
+      {
+        "identifier": "mc_005",
+        "title": "10 Key Concepts in Cognitive Psychology Explained",
+        "description": "Educational video that systematically presents fundamental cognitive psychology concepts including perception, attention, memory, and cognitive biases, providing essential foundational knowledge for understanding mental processes.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=wJJ4O5WJTRU",
+        "source": "YouTube",
+        "duration": "3:22",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "perception",
+          "attention",
+          "memory",
+          "schemas",
+          "cognitive bias",
+          "decision making"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Define the three core cognitive processes: perception, attention, and memory",
+          "Identify how schemas organize and interpret information based on prior knowledge",
+          "Recognize cognitive biases as systematic errors affecting decision making and judgments",
+          "Distinguish between different types of memory (short-term vs long-term) and their functions"
+        ],
+        "semanticKeywords": [
+          "cognitive psychology",
+          "perception",
+          "attention",
+          "memory",
+          "schemas",
+          "cognitive bias",
+          "decision making",
+          "problem solving",
+          "metacognition",
+          "foundational concepts",
+          "mental processes",
+          "educational video"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_006",
+        "title": "Quiz: Cognitive Biases and Mental Processes",
+        "description": "Progressive reflective quiz that guides learners through understanding cognitive bias formation, from basic concepts to personal application, culminating in autonomous analysis of personal decision-making errors.",
+        "contentType": "quiz",
+        "url": "/media/quizriflessivo.docx",
+        "source": "Internal",
+        "duration": "",
+        "language": "Italian",
+        "learningStyle": {
+          "dimension": "Processing",
+          "category": "Reflective"
+        },
+        "primaryConcepts": [
+          "heuristics functionality",
+          "systematic bias nature",
+          "cognitive process mapping",
+          "personal bias recognition",
+          "self-reflection strategies"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Identify how heuristics based on perception, attention, and memory create availability bias",
+          "Interpret the systematic nature of cognitive biases as predictable, recurring distortions",
+          "Map specific cognitive processes (perception, attention, memory) to corresponding bias types",
+          "Analyze personal decision-making errors to autonomously identify involved cognitive processes and biases"
+        ],
+        "semanticKeywords": [
+          "reflective quiz",
+          "heuristics",
+          "systematic biases",
+          "cognitive processes",
+          "availability bias",
+          "confirmation bias",
+          "personal reflection",
+          "decision analysis",
+          "bias recognition",
+          "self-assessment",
+          "progressive learning",
+          "cognitive mapping"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Acquire"]
+      },
+      {
+        "identifier": "mc_007",
+        "title": "Analytical Quiz: Cognitive Biases and Mental Processes",
+        "description": "Problem-based quiz presenting concrete scenarios where learners must autonomously identify cognitive processes and biases, from selective attention in meetings to evolutionary advantages of biased thinking.",
+        "contentType": "quiz",
+        "url": "/media/quizanalytical.docx",
+        "source": "Internal",
+        "duration": "",
+        "language": "Italian",
+        "learningStyle": {
+          "dimension": "Perception",
+          "category": "Sensing"
+        },
+        "primaryConcepts": [
+          "selective attention analysis",
+          "perceptual bias identification",
+          "memory availability effects",
+          "automatic vs analytical thinking",
+          "evolutionary bias origins"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Autonomously analyze concrete workplace scenarios to identify selective attention mechanisms",
+          "Independently diagnose perceptual biases in evaluation situations and predict their consequences",
+          "Apply memory availability concepts to explain distorted frequency judgments in personal experiences",
+          "Distinguish between System 1 and System 2 thinking in emergency decision-making contexts",
+          "Evaluate evolutionary origins of cognitive biases and assess their adaptive vs maladaptive functions"
+        ],
+        "semanticKeywords": [
+          "analytical quiz",
+          "concrete scenarios",
+          "selective attention",
+          "perceptual bias",
+          "memory availability",
+          "automatic thinking",
+          "System 1 System 2",
+          "evolutionary psychology",
+          "autonomous analysis",
+          "workplace scenarios",
+          "problem-based learning",
+          "bias identification"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Acquire"]
+      },
+      {
+        "identifier": "mc_008",
+        "title": "Basic Cognitive Processes Behind Cognitive Biases",
+        "description": "Comprehensive theoretical document explaining the fundamental mental mechanisms that influence thinking, covering attention, perception, memory, and dual-process theory as foundations for understanding cognitive biases.",
+        "contentType": "pdf",
+        "url": "/media/basic_cognitive_processes.pdf",
+        "source": "Internal",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Verbal"
+        },
+        "primaryConcepts": [
+          "cognitive biases definition",
+          "mental heuristics",
+          "selective attention",
+          "perception and reality construction",
+          "memory reconstruction",
+          "dual-process theory",
+          "System 1 vs System 2 thinking"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Define cognitive biases and explain their origin from mental shortcuts",
+          "Identify the four basic cognitive processes: attention, perception, memory, and thinking",
+          "Explain how selective attention leads to confirmation bias and information filtering",
+          "Describe how perception constructs reality through top-down processing",
+          "Recognize memory's selective and reconstructive nature and its impact on availability bias",
+          "Distinguish between System 1 (fast, intuitive) and System 2 (slow, deliberate) thinking processes"
+        ],
+        "semanticKeywords": [
+          "cognitive biases",
+          "mental shortcuts",
+          "heuristics",
+          "selective attention",
+          "confirmation bias",
+          "perception",
+          "top-down processing",
+          "illusory correlation",
+          "stereotyping",
+          "memory reconstruction",
+          "availability bias",
+          "dual-process theory",
+          "System 1 System 2",
+          "Kahneman",
+          "anchoring bias",
+          "framing effects",
+          "theoretical foundations"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_009",
+        "title": "Bias Hunter: Case-Based Analysis of Cognitive Errors",
+        "description": "Structured practical task guiding students through independent analysis of real-world judgment errors, requiring identification of cognitive biases, underlying mental processes, and mitigation strategies through case study methodology.",
+        "contentType": "task",
+        "url": "/media/bias_hunter_task.pdf",
+        "source": "Internal",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Processing",
+          "category": "Active"
+        },
+        "primaryConcepts": [
+          "independent case analysis",
+          "real-world bias identification",
+          "cognitive mechanism mapping",
+          "cause-effect reasoning",
+          "bias mitigation strategies",
+          "practical application methodology"
+        ],
+        "difficulty": "advanced",
+        "learningOutcomes": [
+          "Independently select and analyze real-life cases involving cognitive judgment errors",
+          "Systematically identify specific cognitive biases in authentic scenarios from news, media, or historical events",
+          "Map underlying cognitive mechanisms (attention, memory, perception) to observed bias manifestations",
+          "Construct logical cause-and-effect explanations connecting mental processes to systematic errors",
+          "Develop and propose practical mitigation strategies including critical thinking techniques and decision-making frameworks",
+          "Present analysis findings in structured format through written reports or multimedia presentations"
+        ],
+        "semanticKeywords": [
+          "case-based analysis",
+          "independent analysis",
+          "real-world scenarios",
+          "bias identification",
+          "cognitive mechanisms",
+          "judgment errors",
+          "systematic analysis",
+          "cause-effect reasoning",
+          "mitigation strategies",
+          "critical thinking",
+          "decision-making frameworks",
+          "practical application",
+          "authentic assessment",
+          "structured methodology",
+          "bias hunter"
+        ],
+        "primaryLevel": "Transfer",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_010",
+        "title": "Cognitive Shortcuts and Mental Processes: A Conversational Introduction",
+        "description": "Informal dialogue between two speakers exploring how cognitive shortcuts work, covering attention limitations, perception biases, and memory reconstruction through relatable examples and everyday language.",
+        "contentType": "audio",
+        "url": "/media/cognitive_shortcuts_conversation.mp3",
+        "source": "AI",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Verbal"
+        },
+        "primaryConcepts": [
+          "cognitive shortcuts introduction",
+          "attention limitations",
+          "confirmation bias mechanism",
+          "perception subjectivity",
+          "memory reconstruction",
+          "availability bias",
+          "bias awareness development"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Recognize that the brain uses cognitive shortcuts to process information quickly",
+          "Understand how limited attention leads to selective focus and confirmation bias",
+          "Explain why perception is subjective and influenced by expectations and past experiences",
+          "Recognize that memory is reconstructive rather than a perfect recording",
+          "Identify how availability bias makes recent or vivid memories disproportionately influential",
+          "Develop initial awareness of personal cognitive biases through relatable examples"
+        ],
+        "semanticKeywords": [
+          "cognitive shortcuts",
+          "snap judgments",
+          "mental processes",
+          "attention limitations",
+          "confirmation bias",
+          "selective focus",
+          "perception subjectivity",
+          "memory reconstruction",
+          "availability bias",
+          "bias awareness",
+          "conversational learning",
+          "everyday examples",
+          "relatable scenarios",
+          "informal dialogue"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_011",
+        "title": "To Buy or Not to Buy? The Washing Machine Dilemma",
+        "description": "Interactive scenario simulating everyday consumer decision-making, guiding learners through analysis of cognitive biases in purchasing choices with practical reflection questions and bias mitigation strategies.",
+        "contentType": "scenario",
+        "url": "/media/scenario.docx",
+        "source": "AI",
+        "duration": "7 minutes",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Processing",
+          "category": "Reflective"
+        },
+        "primaryConcepts": [
+          "everyday decision-making biases",
+          "familiarity bias",
+          "priming effects",
+          "confirmation bias in consumer choices",
+          "cognitive process awareness",
+          "practical bias mitigation"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Interpret how memory, attention, and perception influence everyday purchasing decisions",
+          "Identify familiarity bias, priming effects, and confirmation bias in simulated consumer scenarios",
+          "Analyze the interaction between cognitive processes and systematic decision-making errors",
+          "Apply bias awareness strategies to improve future decision-making in real-world contexts",
+          "Develop practical techniques for objective comparison and emotional regulation in choices",
+          "Transfer learning to advise others while avoiding personal bias projection"
+        ],
+        "semanticKeywords": [
+          "everyday decision making",
+          "consumer behavior",
+          "familiarity bias",
+          "priming effects",
+          "confirmation bias",
+          "washing machine dilemma",
+          "brand recognition",
+          "cognitive processes interaction",
+          "practical bias mitigation",
+          "objective comparison strategies",
+          "decision-making awareness",
+          "simulated scenario",
+          "reflection questions",
+          "real-world application"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Transfer"]
+      },
+      {
+        "identifier": "mc_012",
+        "title": "System 1 vs System 2: Understanding Kahneman's Dual-Process Theory",
+        "description": "Educational video explaining Daniel Kahneman's dual-process theory from 'Thinking, Fast and Slow', contrasting intuitive System 1 thinking with deliberate System 2 thinking, including their characteristics, advantages, and limitations.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=[VIDEO_ID]",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "dual-process theory",
+          "System 1 automatic thinking",
+          "System 2 deliberate thinking",
+          "cognitive efficiency vs accuracy",
+          "mental fatigue and laziness",
+          "bias recognition strategies",
+          "critical thinking engagement"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Distinguish between System 1 (fast, automatic) and System 2 (slow, deliberate) thinking modes",
+          "Identify characteristics and functions of each cognitive system in daily life situations",
+          "Recognize the advantages and limitations of both thinking systems",
+          "Understand how System 1 can lead to biases and judgment errors through heuristics",
+          "Explain why System 2 is prone to mental fatigue and cognitive avoidance",
+          "Develop awareness of when to engage System 2 for critical thinking and rational decision-making"
+        ],
+        "semanticKeywords": [
+          "dual-process theory",
+          "System 1 System 2",
+          "Daniel Kahneman",
+          "Thinking Fast and Slow",
+          "automatic thinking",
+          "deliberate thinking",
+          "cognitive systems",
+          "intuitive processing",
+          "effortless thinking",
+          "conscious effort",
+          "mental fatigue",
+          "cognitive biases",
+          "heuristics",
+          "critical thinking",
+          "rational decision making",
+          "educational video"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_013",
+        "title": "Five Examples of Clever Use of Cognitive Biases in Product Design",
+        "description": "UX design video demonstrating practical applications of cognitive biases in digital product design through real-world examples including scarcity effect, Ikea effect, social proof, halo effect, and foot-in-the-door technique.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=pkVPzR7FpCw",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "cognitive biases in design",
+          "scarcity effect",
+          "Ikea effect",
+          "social proof",
+          "halo effect",
+          "foot-in-the-door technique",
+          "UX psychology applications"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Apply scarcity effect principles to create urgency in digital product features",
+          "Implement Ikea effect by designing customizable user experiences that increase perceived value",
+          "Utilize social proof mechanisms to build credibility and influence user behavior",
+          "Leverage halo effect through strategic brand associations and endorsements",
+          "Design foot-in-the-door sequences that break complex tasks into manageable steps",
+          "Integrate cognitive bias principles into practical UX/product design solutions"
+        ],
+        "semanticKeywords": [
+          "cognitive biases",
+          "product design",
+          "UX design",
+          "scarcity effect",
+          "Instagram stories",
+          "Ikea effect",
+          "customization",
+          "social proof",
+          "e-commerce",
+          "halo effect",
+          "brand association",
+          "Dwayne Johnson",
+          "foot-in-the-door technique",
+          "user engagement",
+          "conversion optimization",
+          "design psychology",
+          "real-world examples"
+        ],
+        "primaryLevel": "Transfer",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_014",
+        "title": "Cognitive Biases That Affect UX Designers: Overconfidence, Framing, and Status Quo",
+        "description": "UX design video examining how cognitive biases influence designers' decision-making processes, covering overconfidence effect, framing bias, and status quo bias with practical strategies for bias-aware design practice.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=KXkhlhcWyLY",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "designer cognitive biases",
+          "overconfidence effect in expertise",
+          "framing bias in data interpretation",
+          "status quo bias in design decisions",
+          "research-driven design",
+          "bias mitigation strategies",
+          "self-awareness in UX practice"
+        ],
+        "difficulty": "advanced",
+        "learningOutcomes": [
+          "Recognize how overconfidence effect increases with expertise and affects design decision-making",
+          "Identify framing bias in usability data interpretation and its impact on design conclusions",
+          "Understand how status quo bias leads to resistance in removing or changing existing design features",
+          "Apply research-based approaches to counteract reliance on intuition and assumptions",
+          "Develop strategies for examining data from multiple perspectives to avoid framing effects",
+          "Cultivate willingness to question existing design elements and embrace iterative improvement"
+        ],
+        "semanticKeywords": [
+          "UX designer biases",
+          "overconfidence effect",
+          "expertise overconfidence",
+          "framing bias",
+          "data interpretation",
+          "status quo bias",
+          "design decision making",
+          "usability testing",
+          "research-driven design",
+          "bias mitigation",
+          "design assumptions",
+          "UX practice",
+          "reflective practice",
+          "self-awareness",
+          "iterative design"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Transfer"]
+      },
+      {
+        "identifier": "mc_015",
+        "title": "Heuristics: Mental Shortcuts and Their Hidden Flaws",
+        "description": "Educational video exploring how heuristics serve as cognitive shortcuts for daily decision-making, examining availability and representativeness heuristics through real-world examples including violence perception and medical diagnosis scenarios.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=ReFqFPJHLhA",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Verbal"
+        },
+        "primaryConcepts": [
+          "heuristics as cognitive shortcuts",
+          "availability heuristic",
+          "representativeness heuristic",
+          "decision-making efficiency vs accuracy",
+          "cognitive fallibility",
+          "statistical reasoning errors",
+          "intellectual humility"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Define heuristics as cognitive tools that enable quick decision-making based on past experiences",
+          "Explain how availability heuristic can lead to misconceptions about world violence and current events",
+          "Understand representativeness heuristic through medical diagnosis probability scenarios",
+          "Recognize that intelligence and education do not protect against heuristic-based errors",
+          "Analyze how political views can be distorted by overreliance on mental shortcuts",
+          "Develop intellectual humility and openness to challenging personal judgments and assumptions"
+        ],
+        "semanticKeywords": [
+          "heuristics",
+          "mental shortcuts",
+          "cognitive tools",
+          "availability heuristic",
+          "representativeness heuristic",
+          "decision making",
+          "world violence perception",
+          "medical diagnosis",
+          "false positive rate",
+          "statistical reasoning",
+          "political views",
+          "cognitive fallibility",
+          "intellectual humility",
+          "judgment errors",
+          "quick decisions"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_016",
+        "title": "Understanding Cognitive Biases in UX Design",
+        "description": "Comprehensive presentation examining cognitive biases in UX design practice, exploring the evolutionary purpose of biases, the bias blind spot phenomenon, and practical strategies for creating more inclusive design processes and outcomes.",
+        "contentType": "pdf",
+        "url": "/media/cognitive_biases_ux_design.pdf",
+        "source": "AI",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Understanding",
+          "category": "Sequential"
+        },
+        "primaryConcepts": [
+          "bias blind spot phenomenon",
+          "unconscious bias in design",
+          "evolutionary purpose of biases",
+          "self-perception vs reality gap",
+          "bias recognition strategies",
+          "inclusive design practices",
+          "systematic bias mitigation"
+        ],
+        "difficulty": "advanced",
+        "learningOutcomes": [
+          "Understand the evolutionary purpose and modern implications of cognitive biases as mental shortcuts",
+          "Recognize the bias blind spot phenomenon and its statistical reality (0.15% vs 50% actual bias rates)",
+          "Identify how unconscious biases affect design decisions across multiple dimensions (race, gender, culture, etc.)",
+          "Analyze real-world examples of bias blind spot in workplace discrimination and expert rejection",
+          "Develop systematic approaches for acknowledging, identifying, and addressing personal biases in design work",
+          "Implement external feedback mechanisms and checks-and-balances to mitigate unconscious bias impact"
+        ],
+        "semanticKeywords": [
+          "cognitive biases",
+          "UX design",
+          "bias blind spot",
+          "unconscious bias",
+          "evolutionary psychology",
+          "mental shortcuts",
+          "inclusive design",
+          "workplace discrimination",
+          "self-perception",
+          "systematic bias mitigation",
+          "external feedback",
+          "design process",
+          "checks and balances",
+          "Boston University research",
+          "reflective practice"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Transfer"]
+      },
+      {
+        "identifier": "mc_017",
+        "title": "20 Cognitive Biases That Screw Up Your Decisions",
+        "description": "Visual infographic presenting 20 common cognitive biases with brief explanations and practical examples, covering decision-making errors from anchoring bias to zero-risk bias with illustrative icons and accessible descriptions.",
+        "contentType": "infographic",
+        "url": "/media/infografica.png",
+        "source": "OER Commons",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "cognitive bias catalog",
+          "anchoring bias",
+          "availability heuristic",
+          "confirmation bias",
+          "bandwagon effect",
+          "overconfidence effect",
+          "selective perception",
+          "decision-making errors"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Identify 20 common cognitive biases and their basic definitions",
+          "Recognize real-world examples of biases like anchoring, availability heuristic, and confirmation bias",
+          "Understand how biases affect everyday decisions from salary negotiations to investment choices",
+          "Distinguish between different types of biases including social (bandwagon effect), perceptual (clustering illusion), and memory-based (recency)",
+          "Apply bias awareness to personal decision-making situations through relatable examples",
+          "Build foundational vocabulary for understanding systematic errors in human judgment"
+        ],
+        "semanticKeywords": [
+          "cognitive biases",
+          "decision making errors",
+          "anchoring bias",
+          "availability heuristic",
+          "bandwagon effect",
+          "confirmation bias",
+          "overconfidence",
+          "selective perception",
+          "clustering illusion",
+          "ostrich effect",
+          "placebo effect",
+          "survivorship bias",
+          "zero-risk bias",
+          "visual learning",
+          "infographic",
+          "bias catalog"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_018",
+        "title": "Cognitive Bias in Business Risk Assessment",
+        "description": "Visual mind map illustrating cognitive biases that affect business decision-making and risk assessment, organized around a central brain graphic with categorized biases (social, financial, failure to estimate, short-term) and real business scenarios.",
+        "contentType": "infographic",
+        "url": "/media/mappa.jpg",
+        "source": "MERLOT",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Understanding",
+          "category": "Global"
+        },
+        "primaryConcepts": [
+          "business risk assessment biases",
+          "anchoring effect in negotiations",
+          "availability heuristic in decision making",
+          "confirmation bias in business",
+          "bandwagon effect in teams",
+          "endowment effect in investments",
+          "status quo bias in change management"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Categorize cognitive biases into social, financial, estimation, and short-term decision-making contexts",
+          "Apply bias concepts to realistic business scenarios including negotiations, team decisions, and risk assessment",
+          "Recognize how anchoring effect influences initial business proposals and pricing decisions",
+          "Identify confirmation bias patterns in business research and competitor analysis",
+          "Understand how availability heuristic affects perception of business risks and opportunities",
+          "Connect abstract bias concepts to concrete workplace situations through contextual examples"
+        ],
+        "semanticKeywords": [
+          "cognitive bias",
+          "business decision making",
+          "risk assessment",
+          "anchoring effect",
+          "availability heuristic",
+          "confirmation bias",
+          "bandwagon effect",
+          "endowment effect",
+          "status quo bias",
+          "business scenarios",
+          "workplace psychology",
+          "mind map",
+          "visual learning",
+          "behavioral economics",
+          "business context"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": []
+      },
+      {
+        "identifier": "mc_019",
+        "title": "Cognitive Bias: Ethics Defined",
+        "description": "Educational video explaining cognitive bias as systematic errors in thinking that affect all people, focusing on overconfidence bias, confirmation bias, anchoring effect, and overgeneralization with emphasis on medical decision-making contexts.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=TlOUnOWfw3M",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Verbal"
+        },
+        "primaryConcepts": [
+          "cognitive bias universality",
+          "overconfidence bias in medicine",
+          "confirmation bias in information processing",
+          "anchoring effect in judgment",
+          "overgeneralization tendency",
+          "bias education and mitigation",
+          "rational thinking limitations"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Recognize that cognitive biases affect all people regardless of intelligence or education level",
+          "Define overconfidence bias and its impact on professional decision-making, particularly in medical diagnosis",
+          "Understand confirmation bias as the tendency to process information through existing belief filters",
+          "Explain anchoring effect as insufficient adjustment from initial reference points when new information emerges",
+          "Identify overgeneralization as drawing broad conclusions from limited evidence",
+          "Appreciate that bias awareness and education can reduce but not eliminate cognitive errors"
+        ],
+        "semanticKeywords": [
+          "cognitive bias",
+          "rational thinking",
+          "cognitive errors",
+          "overconfidence bias",
+          "confirmation bias",
+          "anchoring effect",
+          "overgeneralization",
+          "medical decision making",
+          "diagnostic mistakes",
+          "bias education",
+          "universal human tendency",
+          "systematic errors",
+          "bias awareness",
+          "professional judgment"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_020",
+        "title": "Confirmation Bias in UX Research: Recognition and Mitigation",
+        "description": "UX research methodology video examining how confirmation bias affects information gathering, interpretation, and communication in UX practice, with practical strategies for minimizing bias impact in design decisions and usability testing.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=YMMTFmIf3kk",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "confirmation bias in UX research",
+          "bias-aware research methodology",
+          "information seeking bias",
+          "interpretation bias in findings",
+          "hypothesis-driven testing",
+          "severity scoring systems",
+          "reflective research practice"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Recognize how confirmation bias affects information gathering in design decision-making processes",
+          "Identify confirmation bias patterns in usability test interpretation and stakeholder communication",
+          "Apply multiple perspective approaches to minimize bias when researching design solutions",
+          "Implement data-rooted documentation practices to counteract subjective interpretation tendencies",
+          "Utilize severity scoring systems to objectively communicate research findings and issue priorities",
+          "Develop reflective practices for recognizing and reducing personal bias impact in UX research work"
+        ],
+        "semanticKeywords": [
+          "confirmation bias",
+          "UX research",
+          "bias mitigation",
+          "usability testing",
+          "research methodology",
+          "design decisions",
+          "qualitative research",
+          "stakeholder communication",
+          "severity scoring",
+          "hypothesis testing",
+          "reflective practice",
+          "research findings interpretation",
+          "multiple perspectives",
+          "data-driven design",
+          "research bias"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Transfer"]
+      },
+      {
+        "identifier": "mc_021",
+        "title": "Psychology of Design: 106 Cognitive Biases & Principles Cheatsheet",
+        "description": "Comprehensive reference cheatsheet cataloging 106 cognitive biases and psychological principles that affect UX design, organized by categories (Information, Meaning, Time, Memory) with concise one-liner explanations and emoji icons for quick reference.",
+        "contentType": "pdf",
+        "url": "/media/cheatsheet.pdf",
+        "source": "OER Commons",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Understanding",
+          "category": "Global"
+        },
+        "primaryConcepts": [
+          "comprehensive bias catalog",
+          "UX psychology principles",
+          "information processing biases",
+          "meaning-making biases",
+          "time-related cognitive effects",
+          "memory and recall principles",
+          "design psychology reference"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Access a comprehensive catalog of 106 cognitive biases and psychological principles relevant to UX design",
+          "Categorize biases into four main areas: Information processing, Meaning-making, Time-related effects, and Memory",
+          "Quickly reference specific biases using visual icons and concise one-liner explanations",
+          "Understand the breadth of psychological factors that influence user behavior and decision-making",
+          "Apply categorized bias knowledge to different stages of the design process and user journey",
+          "Use the cheatsheet as a practical reference tool for identifying potential bias impacts in design decisions"
+        ],
+        "semanticKeywords": [
+          "cognitive biases",
+          "UX psychology",
+          "design principles",
+          "cheatsheet",
+          "reference guide",
+          "Hicks Law",
+          "confirmation bias",
+          "anchoring bias",
+          "social proof",
+          "loss aversion",
+          "peak-end rule",
+          "Zeigarnik effect",
+          "visual reference",
+          "psychology catalog",
+          "user behavior",
+          "design psychology"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": []
+      },
+      {
+        "identifier": "mc_022",
+        "title": "Machine Learning Bias: How Human Bias Enters AI Systems",
+        "description": "Educational video explaining how human biases infiltrate machine learning systems through interaction bias, latent bias, and selection bias, using relatable examples like shoe recognition and physicist identification to demonstrate bias propagation in AI technology.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=59bMh59JQDo",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "machine learning bias types",
+          "interaction bias in AI training",
+          "latent bias in historical data",
+          "selection bias in datasets",
+          "bias perpetuation in technology",
+          "AI fairness and representation",
+          "human bias transfer to algorithms"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Understand how machine learning differs from traditional programming in terms of pattern recognition vs step-by-step coding",
+          "Identify three main types of bias in machine learning: interaction bias, latent bias, and selection bias",
+          "Recognize how interaction bias occurs when user inputs skew training data toward certain demographics or preferences",
+          "Explain latent bias as historical prejudices embedded in training datasets that algorithms learn to replicate",
+          "Understand selection bias as inadequate representation in chosen training data that excludes certain groups",
+          "Appreciate ongoing efforts to prevent bias perpetuation in AI systems and the importance of inclusive technology development"
+        ],
+        "semanticKeywords": [
+          "machine learning bias",
+          "AI bias",
+          "interaction bias",
+          "latent bias",
+          "selection bias",
+          "algorithm fairness",
+          "training data",
+          "bias perpetuation",
+          "inclusive technology",
+          "AI ethics",
+          "data representation",
+          "human bias transfer",
+          "technology neutrality myth",
+          "bias awareness",
+          "algorithmic accountability"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": []
+      },
+      {
+        "identifier": "mc_023",
+        "title": "Overconfidence Bias: Self-Perception vs Reality in Ethics and Abilities",
+        "description": "Educational video examining overconfidence bias as the tendency to overestimate personal abilities and ethical character, including research findings on business professionals' ethical self-assessment and the relationship between overconfidence and unethical behavior.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=Ac9jI02-Fyg",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "overconfidence bias definition",
+          "ability overestimation patterns",
+          "ethical character overconfidence",
+          "business ethics self-assessment",
+          "charitable giving overestimation",
+          "moral reflection importance",
+          "unethical behavior triggers"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Define overconfidence bias as systematic overestimation of personal abilities and character traits",
+          "Recognize overconfidence patterns in practical skills like driving, teaching, and spelling",
+          "Understand how overconfidence extends to ethical self-perception and moral character assessment",
+          "Analyze research findings showing 50% of business people believe they're in the top 10% ethically",
+          "Connect overconfidence bias to overestimation of charitable behaviors and volunteer commitments",
+          "Appreciate how overconfidence reduces moral reflection and increases likelihood of unethical actions"
+        ],
+        "semanticKeywords": [
+          "overconfidence bias",
+          "self-assessment accuracy",
+          "ethical overconfidence",
+          "moral character",
+          "business ethics",
+          "charitable giving",
+          "volunteer behavior",
+          "ethical decision making",
+          "moral reflection",
+          "unethical behavior",
+          "cognitive bias",
+          "self-perception",
+          "ability overestimation",
+          "character assessment",
+          "ethical challenges"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Acquire"]
+      },
+      {
+        "identifier": "mc_024",
+        "title": "Algorithmic Bias: From Human Prejudice to AI Discrimination",
+        "description": "Comprehensive educational video exploring algorithmic bias origins, real-world examples in hiring and healthcare, the black box problem in AI decision-making, and solutions for creating fair AI systems through inclusive design and algorithmic justice.",
+        "contentType": "video",
+        "url": "https://www.youtube.com/watch?v=cygpAm4ooGs",
+        "source": "YouTube",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Input",
+          "category": "Visual"
+        },
+        "primaryConcepts": [
+          "algorithmic bias origins and types",
+          "training data bias propagation",
+          "real-world discrimination examples",
+          "facial recognition bias problems",
+          "black box AI transparency issues",
+          "algorithmic justice solutions",
+          "inclusive AI development practices"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Understand how human biases transfer into algorithmic systems through design, testing, and application processes",
+          "Recognize the 'garbage in, garbage out' principle in AI training data and its impact on system predictions",
+          "Analyze real-world examples of algorithmic bias in hiring, criminal justice, healthcare, and facial recognition",
+          "Explain the black box problem and why AI decision-making transparency is crucial for bias detection",
+          "Evaluate solutions for minimizing algorithmic bias including diverse training data and third-party auditing",
+          "Appreciate the role of algorithmic justice advocates like Dr. Joy Buolamwini in promoting inclusive AI development"
+        ],
+        "semanticKeywords": [
+          "algorithmic bias",
+          "AI discrimination",
+          "training data bias",
+          "facial recognition bias",
+          "black box problem",
+          "algorithmic justice",
+          "inclusive AI design",
+          "AI transparency",
+          "bias mitigation",
+          "AI ethics",
+          "machine learning fairness",
+          "discriminatory algorithms",
+          "AI accountability",
+          "Joy Buolamwini",
+          "Algorithmic Justice League",
+          "inclusive datasets"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Transfer"]
+      },
+      {
+        "identifier": "mc_025",
+        "title": "Cognitive Biases in Digital Systems: Design Implications and Mitigation Strategies",
+        "description": "Comprehensive guide examining how cognitive biases (confirmation bias, anchoring bias, availability heuristic) manifest in digital systems like search engines and decision support tools, with research-backed design strategies for bias mitigation.",
+        "contentType": "pdf",
+        "url": "/media/digitalsystemsbias.pdf",
+        "source": "AI",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Perception",
+          "category": "Sensing"
+        },
+        "primaryConcepts": [
+          "cognitive biases in digital interfaces",
+          "confirmation bias in search behavior",
+          "anchoring bias in decision support",
+          "availability heuristic in alert systems",
+          "bias-aware design strategies",
+          "digital system psychology",
+          "user-centered bias mitigation"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Understand how cognitive biases systematically affect user interactions with digital systems and interfaces",
+          "Analyze confirmation bias manifestations in search engines and how users selectively engage with confirming information",
+          "Recognize anchoring bias effects in decision support systems, particularly in medical and financial applications",
+          "Explain how availability heuristic influences user responses to alert systems and risk communication",
+          "Apply design strategies to mitigate confirmation bias through diverse perspective presentation and contradictory evidence highlighting",
+          "Implement interface solutions for reducing anchoring bias through continuous data updates and comparative information display"
+        ],
+        "semanticKeywords": [
+          "cognitive biases",
+          "digital systems design",
+          "confirmation bias",
+          "anchoring bias",
+          "availability heuristic",
+          "decision support systems",
+          "search engine behavior",
+          "alert systems",
+          "bias mitigation",
+          "user-centered design",
+          "behavioral economics",
+          "interface psychology",
+          "decision-making support",
+          "digital bias",
+          "system usability"
+        ],
+        "primaryLevel": "Transfer",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_026",
+        "title": "Identifying Cognitive Biases in Real Interfaces: Case Studies and Critical Analysis",
+        "description": "Microlearning module analyzing how real-world digital interfaces (Booking.com, banking apps, AI dashboards) exploit cognitive biases like scarcity, social proof, anchoring, and framing effects, with critical discussion on ethical implications and user autonomy.",
+        "contentType": "case_study",
+        "url": "/media/casestudybias.docx",
+        "source": "AI",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Understanding",
+          "category": "Global"
+        },
+        "primaryConcepts": [
+          "real-world bias exploitation",
+          "scarcity bias in e-commerce",
+          "social proof manipulation",
+          "anchoring in financial interfaces",
+          "framing effects in risk presentation",
+          "AI dashboard bias patterns",
+          "ethical UX design considerations"
+        ],
+        "difficulty": "intermediate",
+        "learningOutcomes": [
+          "Identify specific cognitive biases triggered by real digital interfaces through concrete case study analysis",
+          "Analyze how Booking.com uses scarcity bias and social proof to influence booking decisions and reduce deliberation time",
+          "Recognize anchoring and framing effects in banking applications and their impact on financial decision-making",
+          "Understand how AI dashboards can trigger confirmation bias and overconfidence in automated insights",
+          "Evaluate the ethical implications of bias exploitation in interface design, particularly regarding user autonomy",
+          "Apply bias identification skills to personal app usage through reflective analysis and behavioral self-assessment"
+        ],
+        "semanticKeywords": [
+          "interface bias analysis",
+          "real-world UX examples",
+          "scarcity bias",
+          "social proof",
+          "anchoring effect",
+          "framing effect",
+          "confirmation bias",
+          "overconfidence bias",
+          "ethical UX design",
+          "user autonomy",
+          "bias exploitation",
+          "decision manipulation",
+          "interface psychology",
+          "behavioral design",
+          "critical UX analysis"
+        ],
+        "primaryLevel": "Transfer",
+        "secondaryLevels": ["Make Meaning"]
+      },
+      {
+        "identifier": "mc_027",
+        "title": "Cognitive Biases Quiz: Definitions and Effects in Digital Systems",
+        "description": "Assessment quiz with 10 multiple-choice questions covering major cognitive biases (anchoring, confirmation, availability, representativeness, framing) and their specific effects in digital systems and decision support contexts.",
+        "contentType": "quiz",
+        "url": "/media/quizbiascognitivi.docx",
+        "source": "Internal",
+        "duration": "15-20 minutes",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Processing",
+          "category": "Active"
+        },
+        "primaryConcepts": [
+          "anchoring bias definition",
+          "confirmation bias effects",
+          "availability bias mechanisms",
+          "representativeness bias",
+          "framing effect",
+          "blind spot bias",
+          "biases in digital systems",
+          "practical bias applications"
+        ],
+        "difficulty": "beginner",
+        "learningOutcomes": [
+          "Discriminate between different cognitive bias definitions through multiple-choice assessment",
+          "Correctly identify anchoring bias as the tendency to judge based on first received information",
+          "Recognize confirmation bias effects in ignoring contradictory information to personal beliefs",
+          "Explain availability bias as probability assessment based on mental recall ease",
+          "Apply bias knowledge to practical scenarios in decision support systems",
+          "Evaluate concrete examples of biases in digital contexts like recommendation systems and user interfaces"
+        ],
+        "semanticKeywords": [
+          "cognitive biases quiz",
+          "psychology assessment",
+          "anchoring bias",
+          "confirmation bias",
+          "availability bias",
+          "representativeness bias",
+          "framing effect",
+          "blind spot bias",
+          "decision support systems",
+          "digital psychology",
+          "bias knowledge test",
+          "multiple choice questions",
+          "learning evaluation"
+        ],
+        "primaryLevel": "Acquire",
+        "secondaryLevels": []
+      },
+      {
+        "identifier": "mc_028",
+        "title": "The Overconfidence Bias Case Study: Cognitive Processes in Project Management",
+        "description": "Comprehensive case study following project manager Alex through overconfidence bias formation, systematically analyzing cognitive processes (memory, attention, perception) and System 1 thinking with guided reflection questions.",
+        "contentType": "case_study",
+        "url": "/media/casestudy.pdf",
+        "source": "AI",
+        "duration": "",
+        "language": "English",
+        "learningStyle": {
+          "dimension": "Understanding",
+          "category": "Sequential"
+        },
+        "primaryConcepts": [
+          "overconfidence bias",
+          "selective memory recall",
+          "automatic categorization",
+          "System 1 thinking",
+          "professional decision-making",
+          "bias consequences"
+        ],
+        "difficulty": "advanced",
+        "learningOutcomes": [
+          "Identify how selective memory and attention processes contribute to overconfidence in professional settings",
+          "Interpret the role of automatic categorization and System 1 thinking in creating systematic reasoning errors",
+          "Analyze how past success memory bias leads to underestimation of risks and dismissal of alternative perspectives",
+          "Evaluate concrete professional scenarios to autonomously identify cognitive processes behind overconfidence bias"
+        ],
+        "semanticKeywords": [
+          "overconfidence bias",
+          "project management",
+          "selective memory",
+          "selective attention",
+          "automatic categorization",
+          "System 1 thinking",
+          "professional decision making",
+          "risk assessment",
+          "case study analysis",
+          "cognitive processes",
+          "bias consequences",
+          "systematic errors"
+        ],
+        "primaryLevel": "Make Meaning",
+        "secondaryLevels": ["Transfer"]
+      }
+
+
+    ]
+}

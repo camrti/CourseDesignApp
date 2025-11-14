@@ -1,0 +1,29 @@
+{
+    "name": "microlearning-microservices",
+    "version": "1.0.0",
+    "description": "Microlearning GDTA Platform - Microservices Architecture",
+    "scripts": {
+        "install:all": "npm install && cd api-gateway && npm install && cd ../services/gdta-service && npm install && cd ../course-service && npm install && cd ../recommendation-service && npm install && cd ../..",
+        "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:gdta\" \"npm run dev:course\" \"npm run dev:recommendation\"",
+        "dev:gateway": "cd api-gateway && npm run dev",
+        "dev:gdta": "cd services/gdta-service && npm run dev",
+        "dev:course": "cd services/course-service && npm run dev",
+        "dev:recommendation": "cd services/recommendation-service && npm run dev"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.0",
+        "dotenv": "^16.5.0"
+    },
+    "keywords": [
+        "microservices",
+        "microlearning",
+        "gdta"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "mongoose": "^8.15.1"
+    }
+}

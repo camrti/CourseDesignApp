@@ -1,0 +1,163 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: coursedesign-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: mongodb
+      MONGO_INITDB_DATABASE: course_design
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+          cpus: '0.25'
+    networks:
+      - coursedesign-network
+
+  course-service:
+    build:
+      context: ./services/course-service
+      dockerfile: Dockerfile
+    container_name: coursedesign-course-service
+    environment:
+      - COURSE_SERVICE_PORT=3001
+      - MONGODB_URI=mongodb://admin:mongodb@mongodb:27017/course_design?authSource=admin
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - coursedesign-network
+
+  gdta-service:
+    build:
+      context: ./services/gdta-service
+      dockerfile: Dockerfile
+    container_name: coursedesign-gdta-service
+    environment:
+      - GDTA_SERVICE_PORT=3002
+      - MONGODB_URI=mongodb://admin:mongodb@mongodb:27017/course_design?authSource=admin
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - coursedesign-network
+
+  recommendation-service:
+    build:
+      context: .
+      dockerfile: ./services/recommendation-service/Dockerfile
+    container_name: coursedesign-recommendation-service
+    environment:
+      - RECOMMENDATION_SERVICE_PORT=3003
+      - MICROCONTENT_SERVICE_PORT=3004
+      - MICROCONTENT_SERVICE_URL=http://microcontent-service:3004
+      - SBERT_SERVICE_URL=http://sbert-service:3005
+      - MONGODB_URI=mongodb://admin:mongodb@mongodb:27017/course_design?authSource=admin
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      microcontent-service:
+        condition: service_started
+      sbert-service:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - coursedesign-network
+
+  microcontent-service:
+    build:
+      context: .
+      dockerfile: ./services/microcontent-service/Dockerfile
+    container_name: coursedesign-microcontent-service
+    environment:
+      - MICROCONTENT_SERVICE_PORT=3004
+      - MONGODB_URI=mongodb://admin:mongodb@mongodb:27017/course_design?authSource=admin
+      - SBERT_SERVICE_URL=http://sbert-service:3005
+    volumes:
+      - microcontent_media:/app/media
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      sbert-service:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - coursedesign-network
+
+  sbert-service:
+    build:
+      context: ./shared/sbert
+      dockerfile: Dockerfile
+    container_name: coursedesign-sbert-service
+    environment:
+      - FLASK_ENV=production
+    restart: unless-stopped
+    networks:
+      - coursedesign-network
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    container_name: coursedesign-api-gateway
+    environment:
+      - API_GATEWAY_PORT=8080
+      - COURSE_SERVICE_HOST=course-service
+      - COURSE_SERVICE_PORT=3001
+      - GDTA_SERVICE_HOST=gdta-service
+      - GDTA_SERVICE_PORT=3002
+      - RECOMMENDATION_SERVICE_HOST=recommendation-service
+      - RECOMMENDATION_SERVICE_PORT=3003
+      - MICROCONTENT_SERVICE_HOST=microcontent-service
+      - MICROCONTENT_SERVICE_PORT=3004
+    ports:
+      - "8080:8080"
+    depends_on:
+      - course-service
+      - gdta-service
+      - recommendation-service
+      - microcontent-service
+    restart: unless-stopped
+    networks:
+      - coursedesign-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: coursedesign-client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api-gateway
+    restart: unless-stopped
+    networks:
+      - coursedesign-network
+
+volumes:
+  mongodb_data:
+    driver: local
+  microcontent_media:
+    driver: local
+
+networks:
+  coursedesign-network:
+    driver: bridge

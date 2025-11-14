@@ -1,0 +1,24 @@
+{
+  "microcontents": [
+    {
+      "identifier": "",
+      "title": "",
+      "description": "",
+      "contentType": "",
+      "url": "",
+      "source": "",
+      "duration": "",
+      "language": "",
+      "learningStyle": {
+        "dimension": "",
+        "category": ""
+      },
+      "primaryConcepts": [],
+      "difficulty": "",
+      "learningOutcomes": [],
+      "semanticKeywords": [],
+      "primaryLevel": "",
+      "secondaryLevels": ""
+    }
+  ]
+}

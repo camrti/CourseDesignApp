@@ -1,0 +1,37 @@
+{
+  "identifier": "Psych Guys - Cognitive Bias Perception Memory and Decision Making",
+  "title": "UnderstandingCognitiveBiasPerceptionMemoryandDecisionMaking",
+  "description": "Exploring cognitive biases in psychology, focusing on their impact on perception, decision-making, and memory.",
+  "contentType": "video",
+  "url": "",
+  "source": "Academic",
+  "duration": "2min",
+  "language": "en",
+  "learningStyle": {
+    "dimension": "Input",
+    "category": "Visual"
+  },
+  "primaryConcepts": [
+    "Group Bias",
+    "Sunk Cost Fallacy",
+    "Illusory Correlation"
+  ],
+  "difficulty": "intermediate",
+  "learningOutcomes": [
+    "Understand group bias and its effects on perception.",
+    "Grasp the sunk cost fallacy in decision-making.",
+    "Learn about illusory correlations in generalization."
+  ],
+  "semanticKeywords": [
+    "cognitive bias",
+    "group bias",
+    "sunk cost fallacy",
+    "illusory correlation",
+    "perception"
+  ],
+  "primaryLevel": "Acquire",
+  "secondaryLevels": [
+    "Make Meaning",
+    "Transfer"
+  ]
+}
