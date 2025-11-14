@@ -103,8 +103,6 @@ npm install
 node import-to-db.js output/microcontents-real.json
 ```
 
-Default values work for Docker setup.
-
 ## Stopping
 
 ```bash
