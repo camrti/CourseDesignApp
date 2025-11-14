@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+import os
 
 app = Flask(__name__)
 model = None
@@ -55,4 +56,5 @@ def calculate_similarity():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=3005)
+    port = int(os.environ.get('SBERT_SERVICE_PORT', 3005))
+    app.run(host='0.0.0.0', port=port)

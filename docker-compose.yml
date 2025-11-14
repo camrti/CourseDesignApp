@@ -109,6 +109,7 @@ services:
     container_name: coursedesign-sbert-service
     environment:
       - FLASK_ENV=production
+      - SBERT_SERVICE_PORT=3005
     restart: unless-stopped
     networks:
       - coursedesign-network
