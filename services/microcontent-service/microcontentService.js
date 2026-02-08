@@ -4,7 +4,7 @@ const axios = require('axios');
 class MicrocontentService {
   
   constructor() {
-    this.sbertServiceUrl = process.env.SBERT_SERVICE_URL || 'http://sbert-service:3005';
+    this.sbertServiceUrl = process.env.SBERT_SERVICE_URL || 'http://localhost:3005';
   }
   
   async calculateEmbedding(text) {

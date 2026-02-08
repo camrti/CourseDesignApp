@@ -194,6 +194,7 @@ const DraggableMicroContent = ({ content, onPreview, selectedElement, rankPositi
               onPreview(content);
             }}
             _hover={{ bg: "blue.50" }}
+            data-tutorial="preview-button"
           />
         </HStack>
         
@@ -715,23 +716,24 @@ const SuggestionPanel = ({ selectedElement, currentGDTAStructureId, onLoadingCha
             </HStack>
             
             
-            <Box>
+            <Box data-tutorial="scoring-badge">
               {getScoringBadge()}
             </Box>
             
-            <Button 
-              colorScheme="blue" 
+            <Button
+              colorScheme="blue"
               size="sm"
               onClick={handleAutoSuggest}
               leftIcon={<StarIcon />}
               isLoading={isLoading}
               loadingText="Analyzing..."
+              data-tutorial="suggest-content-button"
             >
               {suggestions.length > 0 ? 'Recalculate' : 'Suggest Content'}
             </Button>
 
             {suggestions.length > 0 && (
-              <Box>
+              <Box data-tutorial="fslsm-filters">
                 <Text fontSize="sm" fontWeight="medium" mb={2}>Filter by FSLSM dimension:</Text>
                 <Wrap spacing={2}>
                   <WrapItem>
@@ -886,7 +888,7 @@ const SuggestionPanel = ({ selectedElement, currentGDTAStructureId, onLoadingCha
           </ModalBody>
           
           <ModalFooter>
-            <Button colorScheme="blue" onClick={handleModalClose}>
+            <Button colorScheme="blue" onClick={handleModalClose} data-tutorial="preview-modal-close">
               Close
             </Button>
           </ModalFooter>

@@ -4,8 +4,8 @@ const Suggestion = require('./models/suggestion');
 class RecommendationService {
   
   constructor() {
-    this.microcontentServiceUrl = process.env.MICROCONTENT_SERVICE_URL || 'http://microcontent-service:3004';
-    this.sbertServiceUrl = process.env.SBERT_SERVICE_URL || 'http://sbert-service:3005';
+    this.microcontentServiceUrl = process.env.MICROCONTENT_SERVICE_URL || 'http://localhost:3004';
+    this.sbertServiceUrl = process.env.SBERT_SERVICE_URL || 'http://localhost:3005';
   }
   
   async getCachedSuggestions(gdtaElementId) {

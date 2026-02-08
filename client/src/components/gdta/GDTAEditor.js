@@ -30,14 +30,34 @@ import {
   useDisclosure,
   Badge
 } from '@chakra-ui/react';
-import { AddIcon, EditIcon, DeleteIcon } from '@chakra-ui/icons';
+import { AddIcon, EditIcon, DeleteIcon, ViewIcon } from '@chakra-ui/icons';
+import GDTATreeView from './GDTATreeView';
 
-const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, onStructureUpdate }) => {
+const TUTORIAL_EXAMPLES = {
+  createGDTA: {
+    title: 'Cognitive Biases in Decision-Making',
+    overallGoal: 'Recognizing and analyzing how cognitive biases form and manifest in order to design more effective human-machine systems and improve real-world decision-making'
+  },
+  addGoal: {
+    title: 'Understand and evaluate the role of cognitive biases in decision-making'
+  },
+  addSubgoal: {
+    title: 'Identify the cognitive mechanisms that generate biases'
+  },
+  addRequirement: {
+    title: 'Knowing the basic cognitive processes (e.g., memory, attention)',
+    level: 1
+  }
+};
+
+const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, onStructureUpdate, tutorialStep }) => {
   const [gdtaStructures, setGDTAStructures] = useState([]);
   const [currentStructure, setCurrentStructure] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedElement, setSelectedElement] = useState(null);
+  const [accordionIndex, setAccordionIndex] = useState([0]);
+  const [subgoalAccordionIndex, setSubgoalAccordionIndex] = useState([]);
 
   const [newTitle, setNewTitle] = useState('');
   const [newElement, setNewElement] = useState({
@@ -51,7 +71,8 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
   const { isOpen: isCreateStructureOpen, onOpen: onCreateStructureOpen, onClose: onCreateStructureClose } = useDisclosure();
   const { isOpen: isAddElementOpen, onOpen: onAddElementOpen, onClose: onAddElementClose } = useDisclosure();
   const { isOpen: isEditElementOpen, onOpen: onEditElementOpen, onClose: onEditElementClose } = useDisclosure();
-  
+  const { isOpen: isTreeViewOpen, onOpen: onTreeViewOpen, onClose: onTreeViewClose } = useDisclosure();
+
   const toast = useToast();
   
   const handleDeleteStructure = async () => {
@@ -186,9 +207,18 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
         console.error(err);
       }
     };
-    
+
     fetchGDTAStructures();
   }, []);
+
+  // Espandi automaticamente la GDTA quando si arriva allo step del requirement
+  useEffect(() => {
+    if (tutorialStep === 7 && currentStructure?.goals?.length > 0) {
+      // Step 8 (index 7): espandi il primo goal e il primo subgoal per mostrare il requirement
+      setAccordionIndex([0]);
+      setSubgoalAccordionIndex([0]);
+    }
+  }, [tutorialStep, currentStructure]);
   
   const handleCreateStructure = async () => {
     if (!newTitle.trim()) {
@@ -288,19 +318,46 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
   
   const handleAddElementClick = (type, parentId = null) => {
     console.log(`Opening modal to add ${type} with parentId:`, parentId);
-  
-    setNewElement({
+
+    const prefilled = {
       type,
       title: '',
       description: '',
       level: 1,
       parentId: parentId || null
-    });
-  
+    };
+
+    if (tutorialStep !== null && tutorialStep !== undefined) {
+      if (type === 'goal' && tutorialStep === 1) {
+        prefilled.title = TUTORIAL_EXAMPLES.addGoal.title;
+      } else if (type === 'subgoal' && tutorialStep === 2) {
+        prefilled.title = TUTORIAL_EXAMPLES.addSubgoal.title;
+      } else if (type === 'requirement' && tutorialStep === 3) {
+        prefilled.title = TUTORIAL_EXAMPLES.addRequirement.title;
+        prefilled.level = TUTORIAL_EXAMPLES.addRequirement.level;
+      }
+    }
+
+    setNewElement(prefilled);
     onAddElementOpen();
   };
-  
-  
+
+  const handleOpenCreateStructure = () => {
+    if (tutorialStep === 0) {
+      setNewTitle(TUTORIAL_EXAMPLES.createGDTA.title);
+      setNewElement(prev => ({
+        ...prev,
+        title: TUTORIAL_EXAMPLES.createGDTA.overallGoal,
+        description: ''
+      }));
+    } else {
+      setNewTitle('');
+      setNewElement(prev => ({ ...prev, title: '', description: '' }));
+    }
+    onCreateStructureOpen();
+  };
+
+
   const handleAddElement = async () => {
     if (!newElement.title.trim()) {
       toast({
@@ -405,15 +462,9 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
       
       setCurrentStructure(updatedStructure);
       await saveStructureToDatabase(updatedStructure);
-      
-      toast({
-        title: 'Element added',
-        description: `${newElement.title} added successfully`,
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-      });
-      
+
+      // Toast rimosso - non mostrare messaggi di successo per ogni aggiunta
+
       onAddElementClose();
     } catch (err) {
       console.error('Error adding element:', err);
@@ -439,9 +490,21 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
       });
       return;
     }
-    
+
     setSelectedElement(element);
-    
+
+    // Gestione espansione/collasso GDTA durante il tutorial
+    if (tutorialStep !== null) {
+      // Step 6 (index 5): dopo aver cliccato goal, collassa tutto
+      if (tutorialStep === 5 && element.type === 'goal') {
+        setAccordionIndex([]);
+      }
+      // Step 8 (index 7): dopo aver cliccato requirement, collassa tutto
+      else if (tutorialStep === 7 && element.type === 'requirement') {
+        setAccordionIndex([]);
+      }
+    }
+
     if (onSelectElement) {
       onSelectElement(element);
     }
@@ -594,15 +657,9 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
       
       setCurrentStructure(updatedStructure);
       await saveStructureToDatabase(updatedStructure);
-      
-      toast({
-        title: 'Element modified',
-        description: 'Changes saved successfully',
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-      });
-      
+
+      // Toast rimosso - non mostrare messaggi di successo per ogni modifica
+
       onEditElementClose();
     } catch (err) {
       console.error('Error editing element:', err);
@@ -623,7 +680,7 @@ const renderGDTAStructure = () => {
   return (
     <Box>
       
-      <Accordion allowMultiple defaultIndex={[0]} mt={4}>
+      <Accordion allowMultiple index={accordionIndex} onChange={setAccordionIndex} mt={4}>
         <AccordionItem 
           borderWidth="2px" 
           borderColor="purple.500" 
@@ -632,10 +689,11 @@ const renderGDTAStructure = () => {
           bg="purple.50"
         >
           <h2>
-            <AccordionButton 
-              _expanded={{ bg: 'purple.100' }} 
+            <AccordionButton
+              _expanded={{ bg: 'purple.100' }}
               borderRadius="md"
               py={3}
+              data-tutorial="overall-goal-accordion"
             >
               <Box flex="1" textAlign="left">
                 <HStack>
@@ -673,13 +731,14 @@ const renderGDTAStructure = () => {
               </Text>
             )}
             
-            <Button 
-              size="sm" 
-              colorScheme="purple" 
+            <Button
+              size="sm"
+              colorScheme="purple"
               variant="outline"
               mb={4}
               leftIcon={<AddIcon />}
               onClick={() => handleAddElementClick('goal')}
+              data-tutorial="add-goal"
             >
               Add Goal
             </Button>
@@ -695,8 +754,8 @@ const renderGDTAStructure = () => {
                   mb={3}
                 >
                   <h3>
-                    <AccordionButton 
-                      _expanded={{ bg: 'red.50' }} 
+                    <AccordionButton
+                      _expanded={{ bg: 'red.50' }}
                       borderRadius="md"
                       cursor={isLoadingSuggestions ? "not-allowed" : "pointer"}
                       opacity={isLoadingSuggestions ? 0.5 : 1}
@@ -706,6 +765,7 @@ const renderGDTAStructure = () => {
                         description: goal.description,
                         type: 'goal'
                       })}
+                      {...(goalIndex === 0 ? { 'data-tutorial': 'gdta-element', 'data-element-type': 'goal' } : {})}
                     >
                       <Box flex="1" textAlign="left">
                         <HStack>
@@ -753,20 +813,27 @@ const renderGDTAStructure = () => {
                       </Text>
                     )}
                     
-                    <Button 
-                      size="sm" 
-                      colorScheme="green" 
+                    <Button
+                      size="sm"
+                      colorScheme="green"
                       variant="outline"
                       mb={4}
                       leftIcon={<AddIcon />}
                       onClick={() => handleAddElementClick('subgoal', goal._id)}
+                      {...(goalIndex === 0 ? { 'data-tutorial': 'add-subgoal' } : {})}
                     >
                       Add Subgoal
                     </Button>
                     
                     
                     {goal.subgoals && goal.subgoals.length > 0 ? (
-                      <Accordion allowMultiple defaultIndex={[]}>
+                      <Accordion
+                        allowMultiple
+                        {...(goalIndex === 0 && tutorialStep === 7
+                          ? { index: subgoalAccordionIndex, onChange: setSubgoalAccordionIndex }
+                          : { defaultIndex: [] }
+                        )}
+                      >
                         {goal.subgoals.map((subgoal, subgoalIndex) => (
                           <AccordionItem 
                             key={subgoal._id} 
@@ -776,8 +843,8 @@ const renderGDTAStructure = () => {
                             mb={3}
                           >
                             <h4>
-                              <AccordionButton 
-                                _expanded={{ bg: 'green.50' }} 
+                              <AccordionButton
+                                _expanded={{ bg: 'green.50' }}
                                 borderRadius="md"
                                 cursor={isLoadingSuggestions ? "not-allowed" : "pointer"}
                                 opacity={isLoadingSuggestions ? 0.5 : 1}
@@ -787,6 +854,7 @@ const renderGDTAStructure = () => {
                                   description: subgoal.description,
                                   type: 'subgoal'
                                 })}
+                                {...(goalIndex === 0 && subgoalIndex === 0 ? { 'data-tutorial': 'gdta-element', 'data-element-type': 'subgoal' } : {})}
                               >
                                 <Box flex="1" textAlign="left">
                                   <HStack>
@@ -835,9 +903,9 @@ const renderGDTAStructure = () => {
                                 </Text>
                               )}
                               
-                              <Button 
-                                size="sm" 
-                                colorScheme="blue" 
+                              <Button
+                                size="sm"
+                                colorScheme="blue"
                                 variant="outline"
                                 mb={4}
                                 leftIcon={<AddIcon />}
@@ -846,6 +914,7 @@ const renderGDTAStructure = () => {
                                   console.log("Parent goal:", goal._id);
                                   handleAddElementClick('requirement', `${goal._id}-${subgoal._id}`);
                                 }}
+                                {...(goalIndex === 0 && subgoalIndex === 0 ? { 'data-tutorial': 'add-requirement' } : {})}
                               >
                                 Add Information Requirement
                               </Button>
@@ -860,13 +929,13 @@ const renderGDTAStructure = () => {
                                     </Heading>
                                     {subgoal.informationRequirements
                                       .filter(req => req.level === 1)
-                                      .map(req => (
-                                        <Box 
-                                          key={req._id} 
-                                          p={3} 
-                                          borderWidth="1px" 
-                                          borderColor="blue.200" 
-                                          borderRadius="md" 
+                                      .map((req, reqIndex) => (
+                                        <Box
+                                          key={req._id}
+                                          p={3}
+                                          borderWidth="1px"
+                                          borderColor="blue.200"
+                                          borderRadius="md"
                                           bg="blue.50"
                                           mb={2}
                                           cursor={isLoadingSuggestions ? "not-allowed" : "pointer"}
@@ -878,6 +947,7 @@ const renderGDTAStructure = () => {
                                             type: 'requirement',
                                             level: 1
                                           })}
+                                          {...(goalIndex === 0 && subgoalIndex === 0 && reqIndex === 0 ? { 'data-tutorial': 'requirement-element', 'data-element-type': 'requirement' } : {})}
                                         >
                                           <HStack justify="space-between">
                                             <Text fontWeight="medium">{req.title}</Text>
@@ -935,13 +1005,13 @@ const renderGDTAStructure = () => {
                                     </Heading>
                                     {subgoal.informationRequirements
                                       .filter(req => req.level === 2)
-                                      .map(req => (
-                                        <Box 
-                                          key={req._id} 
-                                          p={3} 
-                                          borderWidth="1px" 
-                                          borderColor="teal.200" 
-                                          borderRadius="md" 
+                                      .map((req, reqIndex) => (
+                                        <Box
+                                          key={req._id}
+                                          p={3}
+                                          borderWidth="1px"
+                                          borderColor="teal.200"
+                                          borderRadius="md"
                                           bg="teal.50"
                                           mb={2}
                                           cursor={isLoadingSuggestions ? "not-allowed" : "pointer"}
@@ -953,6 +1023,7 @@ const renderGDTAStructure = () => {
                                             type: 'requirement',
                                             level: 2
                                           })}
+                                          {...(goalIndex === 0 && subgoalIndex === 0 && reqIndex === 0 ? { 'data-tutorial': 'gdta-element', 'data-element-type': 'requirement' } : {})}
                                         >
                                           <HStack justify="space-between">
                                             <Text fontWeight="medium">{req.title}</Text>
@@ -1010,13 +1081,13 @@ const renderGDTAStructure = () => {
                                     </Heading>
                                     {subgoal.informationRequirements
                                       .filter(req => req.level === 3)
-                                      .map(req => (
-                                        <Box 
-                                          key={req._id} 
-                                          p={3} 
-                                          borderWidth="1px" 
-                                          borderColor="cyan.200" 
-                                          borderRadius="md" 
+                                      .map((req, reqIndex) => (
+                                        <Box
+                                          key={req._id}
+                                          p={3}
+                                          borderWidth="1px"
+                                          borderColor="cyan.200"
+                                          borderRadius="md"
                                           bg="cyan.50"
                                           mb={2}
                                           cursor={isLoadingSuggestions ? "not-allowed" : "pointer"}
@@ -1028,6 +1099,7 @@ const renderGDTAStructure = () => {
                                             type: 'requirement',
                                             level: 3
                                           })}
+                                          {...(goalIndex === 0 && subgoalIndex === 0 && reqIndex === 0 ? { 'data-tutorial': 'gdta-element', 'data-element-type': 'requirement' } : {})}
                                         >
                                           <HStack justify="space-between">
                                             <Text fontWeight="medium">{req.title}</Text>
@@ -1141,17 +1213,28 @@ const renderGDTAStructure = () => {
         <HStack spacing={2}>
           {currentStructure && (
             <>
-              <Button 
-                colorScheme="blue" 
+              <Button
+                colorScheme="blue"
                 leftIcon={<AddIcon />}
-                onClick={onCreateStructureOpen}
+                onClick={handleOpenCreateStructure}
                 size="sm"
                 variant="outline"
+                data-tutorial="create-gdta"
               >
                 Create GDTA
               </Button>
-              <Button 
-                colorScheme="red" 
+              <Button
+                colorScheme="purple"
+                leftIcon={<ViewIcon />}
+                onClick={onTreeViewOpen}
+                size="sm"
+                variant="outline"
+                data-tutorial="view-tree"
+              >
+                View Tree
+              </Button>
+              <Button
+                colorScheme="red"
                 leftIcon={<DeleteIcon />}
                 onClick={handleDeleteStructure}
                 size="sm"
@@ -1177,10 +1260,11 @@ const renderGDTAStructure = () => {
       ) : (
         <Box p={8} textAlign="center" color="gray.500">
           <Text mb={4}>Select an existing GDTA structure or create a new one</Text>
-          <Button 
-            colorScheme="blue" 
+          <Button
+            colorScheme="blue"
             leftIcon={<AddIcon />}
-            onClick={onCreateStructureOpen}
+            onClick={handleOpenCreateStructure}
+            data-tutorial="create-gdta"
           >
             Create new GDTA
           </Button>
@@ -1228,7 +1312,7 @@ const renderGDTAStructure = () => {
             <Button variant="ghost" mr={3} onClick={onCreateStructureClose}>
               Cancel
             </Button>
-            <Button colorScheme="blue" onClick={handleCreateStructure}>
+            <Button colorScheme="blue" onClick={handleCreateStructure} data-tutorial="create-gdta-save">
               Create
             </Button>
           </ModalFooter>
@@ -1286,7 +1370,15 @@ const renderGDTAStructure = () => {
             <Button variant="ghost" mr={3} onClick={onAddElementClose}>
               Cancel
             </Button>
-            <Button colorScheme="blue" onClick={handleAddElement}>
+            <Button
+              colorScheme="blue"
+              onClick={handleAddElement}
+              data-tutorial={
+                newElement.type === 'goal' ? 'add-goal-save' :
+                newElement.type === 'subgoal' ? 'add-subgoal-save' :
+                newElement.type === 'requirement' ? 'add-requirement-save' : undefined
+              }
+            >
               Add
             </Button>
           </ModalFooter>
@@ -1351,6 +1443,12 @@ const renderGDTAStructure = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
+
+      <GDTATreeView
+        isOpen={isTreeViewOpen}
+        onClose={onTreeViewClose}
+        structure={currentStructure}
+      />
     </Box>
   );
 };

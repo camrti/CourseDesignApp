@@ -2,12 +2,16 @@ const Course = require('./models/course');
 const axios = require('axios');
 const PDFGenerator = require('./utilities/pdfGenerator');
 
+const GDTA_SERVICE_HOST = process.env.GDTA_SERVICE_HOST || 'localhost';
+const GDTA_SERVICE_PORT = process.env.GDTA_SERVICE_PORT || '3002';
+const GDTA_SERVICE_URL = `http://${GDTA_SERVICE_HOST}:${GDTA_SERVICE_PORT}`;
+
 class CourseService {
-  
+
   async createCourse(courseData) {
     try {
       try {
-        await axios.get(`http://gdta-service:3002/api/gdta/${courseData.gdtaStructureId}`);
+        await axios.get(`${GDTA_SERVICE_URL}/api/gdta/${courseData.gdtaStructureId}`);
       } catch (error) {
         throw new Error('GDTA structure not found');
       }
@@ -121,7 +125,7 @@ class CourseService {
       
       let gdtaStructure = null;
       try {
-        const gdtaResponse = await axios.get(`http://gdta-service:3002/api/gdta/${course.gdtaStructureId}`);
+        const gdtaResponse = await axios.get(`${GDTA_SERVICE_URL}/api/gdta/${course.gdtaStructureId}`);
         gdtaStructure = gdtaResponse.data;
       } catch (gdtaError) {
         console.error('Error fetching GDTA structure:', gdtaError.message);

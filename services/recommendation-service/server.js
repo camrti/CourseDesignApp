@@ -1,3 +1,5 @@
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -5,7 +7,9 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.RECOMMENDATION_SERVICE_PORT || 3003;
 
-process.env.MICROCONTENT_SERVICE_URL = `http://microcontent-service:${process.env.MICROCONTENT_SERVICE_PORT || 3004}`;
+if (!process.env.MICROCONTENT_SERVICE_URL) {
+  process.env.MICROCONTENT_SERVICE_URL = `http://localhost:${process.env.MICROCONTENT_SERVICE_PORT || 3004}`;
+}
 
 app.use(cors());
 app.use(express.json());

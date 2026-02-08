@@ -1,7 +1,8 @@
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const path = require('path');
 
 const app = express();
 const PORT = process.env.MICROCONTENT_SERVICE_PORT || 3004;
@@ -88,9 +89,14 @@ app.use((err, req, res, next) => {
   });
 });
 
+const seedMicrocontents = require('./seedMicrocontents');
+
 const start = async () => {
   await connectDB();
-  
+
+  // Auto-seed microcontents from JSON file if database is empty
+  await seedMicrocontents();
+
   app.listen(PORT, () => {
     console.log(`Microcontent Service running on port ${PORT}`);
     console.log(`Database: ${process.env.MONGODB_URI}`);

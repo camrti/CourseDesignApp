@@ -135,14 +135,8 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
         setCourseId(response.data._id);
         setCourseTitle(response.data.title);
         setCourseSections(response.data.sections || []);
-        
-        toast({
-          title: 'Course loaded',
-          description: 'Existing course loaded successfully',
-          status: 'success',
-          duration: 2000,
-          isClosable: true,
-        });
+
+        // Toast rimosso - il caricamento è silenzioso
       }
     } catch (error) {
       if (error.response && error.response.status === 404) {
@@ -341,18 +335,8 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
     setSelectedSubgoal('');
     setHasUnsavedChanges(true);
     onClose();
-    
-    toast({
-      title: 'Section added',
-      description: selectedSubgoalObj 
-        ? `Section mapped to: ${selectedGoalObj.title} → ${selectedSubgoalObj.title}`
-        : selectedGoalObj
-        ? `Section mapped to goal: ${selectedGoalObj.title}`
-        : 'New section created',
-      status: 'success',
-      duration: 3000,
-      isClosable: true,
-    });
+
+    // Toast removed - no need to show success message for section creation
   };
   
   const getContentTypeIcon = (contentType) => {
@@ -520,11 +504,12 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
       
       <HStack mb={4} justify="space-between">
         <Text fontWeight="medium">Course sections</Text>
-        <Button 
-          size="sm" 
-          colorScheme="blue" 
+        <Button
+          size="sm"
+          colorScheme="blue"
           leftIcon={<AddIcon />}
           onClick={onOpen}
+          data-tutorial="new-section"
         >
           New Section
         </Button>
@@ -584,10 +569,11 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel pb={4} bg="white">
-              <DropTargetSection 
-                section={section} 
+              <DropTargetSection
+                section={section}
                 onAddContent={addContentToSection}
               >
+                <Box data-tutorial="drag-drop-area">
                 {section.contents.length > 0 ? (
                   <VStack align="stretch" spacing={3}>
                     {section.contents.map((content) => (
@@ -632,6 +618,7 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
                     </Text>
                   </Box>
                 )}
+                </Box>
               </DropTargetSection>
             </AccordionPanel>
           </AccordionItem>
@@ -748,7 +735,7 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
             }}>
               Cancel
             </Button>
-            <Button colorScheme="blue" onClick={addNewSection}>
+            <Button colorScheme="blue" onClick={addNewSection} data-tutorial="add-section-button">
               Add
             </Button>
           </ModalFooter>
