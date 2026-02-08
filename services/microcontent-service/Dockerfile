@@ -12,6 +12,9 @@ COPY services/microcontent-service/ ./
 
 COPY shared/sbert/ ./shared/sbert/
 
+# Copy microcontent seed data
+COPY annotation-scripts/output/microcontents-real.json ../../annotation-scripts/output/
+
 RUN pip3 install --no-cache-dir -r ./shared/sbert/requirements.txt --break-system-packages
 
 RUN mkdir -p media

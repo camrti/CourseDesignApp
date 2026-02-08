@@ -90,12 +90,23 @@ app.use((err, req, res, next) => {
 });
 
 const seedMicrocontents = require('./seedMicrocontents');
+const microcontentService = require('./microcontentService');
 
 const start = async () => {
   await connectDB();
 
   // Auto-seed microcontents from JSON file if database is empty
   await seedMicrocontents();
+
+  // Compute embeddings for any microcontents that don't have them yet
+  console.log('Checking for microcontents without embeddings...');
+  try {
+    await microcontentService.computeEmbeddingsForAll();
+    console.log('✅ Embedding computation complete!');
+  } catch (error) {
+    console.error('⚠️  Warning: Failed to compute embeddings:', error.message);
+    console.error('The service will still start, but recommendations may not work properly.');
+  }
 
   app.listen(PORT, () => {
     console.log(`Microcontent Service running on port ${PORT}`);
