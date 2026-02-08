@@ -3,19 +3,12 @@
     "version": "1.0.0",
     "description": "Microlearning GDTA Platform - Microservices Architecture",
     "scripts": {
-        "install:all": "npm install && cd api-gateway && npm install && cd ../services/gdta-service && npm install && cd ../course-service && npm install && cd ../recommendation-service && npm install && cd ../microcontent-service && npm install && cd ../.. && cd client && npm install && cd ..",
-        "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:gdta\" \"npm run dev:course\" \"npm run dev:recommendation\" \"npm run dev:microcontent\"",
+        "install:all": "npm install && cd api-gateway && npm install && cd ../services/gdta-service && npm install && cd ../course-service && npm install && cd ../recommendation-service && npm install && cd ../..",
+        "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:gdta\" \"npm run dev:course\" \"npm run dev:recommendation\"",
         "dev:gateway": "cd api-gateway && npm run dev",
         "dev:gdta": "cd services/gdta-service && npm run dev",
         "dev:course": "cd services/course-service && npm run dev",
-        "dev:recommendation": "cd services/recommendation-service && npm run dev",
-        "dev:microcontent": "cd services/microcontent-service && npm run dev",
-        "dev:client": "cd client && npm start",
-        "dev:sbert": "cd shared/sbert && SBERT_SERVICE_PORT=3005 python3 sbert_service.py",
-        "dev:all": "concurrently -n gateway,gdta,course,rec,micro,client -c blue,green,yellow,magenta,cyan,white \"npm run dev:gateway\" \"npm run dev:gdta\" \"npm run dev:course\" \"npm run dev:recommendation\" \"npm run dev:microcontent\" \"npm run dev:client\"",
-        "start:local": "bash scripts/start-local.sh",
-        "stop:local": "bash scripts/stop-local.sh",
-        "start:mongodb": "docker run -d --name coursedesign-mongodb-local -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=mongodb -e MONGO_INITDB_DATABASE=course_design -p 27017:27017 mongo:7.0 || echo 'MongoDB already running'"
+        "dev:recommendation": "cd services/recommendation-service && npm run dev"
     },
     "devDependencies": {
         "concurrently": "^8.2.0",
