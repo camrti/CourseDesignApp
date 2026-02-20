@@ -111,7 +111,7 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
   
   const loadGDTAStructure = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/gdta/${gdtaStructureId}`);
+      const response = await axios.get(`/api/gdta/${gdtaStructureId}`);
       setGdtaStructure(response.data);
       console.log('GDTA structure loaded:', response.data.title);
     } catch (error) {
@@ -129,7 +129,7 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
   const loadOrCreateCourse = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`http://localhost:8080/api/courses/by-gdta/${gdtaStructureId}`);
+      const response = await axios.get(`/api/courses/by-gdta/${gdtaStructureId}`);
       
       if (response.data) {
         setCourseId(response.data._id);
@@ -158,7 +158,7 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
   
   const createNewCourse = async () => {
     try {
-      const response = await axios.post('http://localhost:8080/api/courses', {
+      const response = await axios.post('/api/courses', {
         title: 'New Course',
         gdtaStructureId: gdtaStructureId,
         sections: []
@@ -192,7 +192,7 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
     
     setIsSaving(true);
     try {
-      await axios.put(`http://localhost:8080/api/courses/${courseId}`, {
+      await axios.put(`/api/courses/${courseId}`, {
         title: courseTitle,
         sections: courseSections
       });
@@ -412,7 +412,7 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
         isClosable: true,
       });
       
-      const response = await axios.post(`http://localhost:8080/api/courses/${courseId}/export/pdf`);
+      const response = await axios.post(`/api/courses/${courseId}/export/pdf`);
       
       const courseNameSafe = courseTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
       const filename = `${courseNameSafe}.html`;

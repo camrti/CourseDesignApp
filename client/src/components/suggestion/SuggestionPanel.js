@@ -294,7 +294,7 @@ const SuggestionPanel = ({ selectedElement, currentGDTAStructureId, onLoadingCha
         fileName = content.url.split('/').pop();
       }
       
-      return `http://localhost:8080/media/${fileName}`;
+      return `/media/${fileName}`;
     }
     
     return content.url;
@@ -365,7 +365,7 @@ const SuggestionPanel = ({ selectedElement, currentGDTAStructureId, onLoadingCha
     setError(null);
     
     try {
-      const response = await axios.post('http://localhost:8080/api/recommendations/suggestions', {
+      const response = await axios.post('/api/recommendations/suggestions', {
         gdtaElement: {
           id: selectedElement.id,
           title: selectedElement.title,
@@ -556,7 +556,7 @@ const SuggestionPanel = ({ selectedElement, currentGDTAStructureId, onLoadingCha
                 size="lg"
                 onClick={() => {
                   const filename = previewUrl.split('/').pop();
-                  const downloadUrl = `http://localhost:8080/media/download/${filename}`;
+                  const downloadUrl = `/media/download/${filename}`;
                   
                   const link = document.createElement('a');
                   link.href = downloadUrl;

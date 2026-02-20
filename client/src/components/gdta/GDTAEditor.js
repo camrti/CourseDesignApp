@@ -97,7 +97,7 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
       
       try {
         console.log('Looking for course associated with GDTA:', currentStructure._id);
-        const courseResponse = await axios.get(`http://localhost:8080/api/courses/by-gdta/${currentStructure._id}`);
+        const courseResponse = await axios.get(`/api/courses/by-gdta/${currentStructure._id}`);
         
         console.log('Course search response:', courseResponse.data);
         
@@ -106,7 +106,7 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
           console.log('Course found with ID:', courseId);
           console.log('Proceeding with course deletion...');
           
-          const deleteResponse = await axios.delete(`http://localhost:8080/api/courses/${courseId}`);
+          const deleteResponse = await axios.delete(`/api/courses/${courseId}`);
           console.log('Course deletion response:', deleteResponse.data);
           console.log('Course deleted successfully!');
         } else {
@@ -132,7 +132,7 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
       }
       
       console.log('Proceeding with GDTA structure deletion:', currentStructure._id);
-      const gdtaDeleteResponse = await axios.delete(`http://localhost:8080/api/gdta/${currentStructure._id}`);
+      const gdtaDeleteResponse = await axios.delete(`/api/gdta/${currentStructure._id}`);
       console.log('GDTA deletion response:', gdtaDeleteResponse.data);
       console.log('GDTA deleted successfully!');
       
@@ -170,7 +170,7 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
   
   const saveStructureToDatabase = async (updatedStructure) => {
     try {
-      await axios.put(`http://localhost:8080/api/gdta/${updatedStructure._id}`, {
+      await axios.put(`/api/gdta/${updatedStructure._id}`, {
         title: updatedStructure.title,
         description: updatedStructure.description,
         overallGoal: updatedStructure.overallGoal,
@@ -198,7 +198,7 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
     const fetchGDTAStructures = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get('http://localhost:8080/api/gdta');
+        const response = await axios.get('/api/gdta');
         setGDTAStructures(response.data);
         setIsLoading(false);
       } catch (err) {
@@ -235,7 +235,7 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
     try {
       console.log('Starting automatic GDTA + Course creation...');
       
-      const gdtaResponse = await axios.post('http://localhost:8080/api/gdta', {
+      const gdtaResponse = await axios.post('/api/gdta', {
         title: newTitle,
         description: 'New GDTA structure',
         overallGoal: {
@@ -249,7 +249,7 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
       console.log('GDTA created with ID:', newGDTAStructure._id);
       
       try {
-        const courseResponse = await axios.post('http://localhost:8080/api/courses', {
+        const courseResponse = await axios.post('/api/courses', {
           title: `Course: ${newTitle}`,
           description: `Course based on GDTA structure: ${newTitle}`,
           gdtaStructureId: newGDTAStructure._id,

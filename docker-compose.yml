@@ -8,8 +8,6 @@ services:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: mongodb
       MONGO_INITDB_DATABASE: course_design
-    ports:
-      - "27017:27017"
     volumes:
       - mongodb_data:/data/db
     healthcheck:
@@ -137,8 +135,6 @@ services:
       - RECOMMENDATION_SERVICE_PORT=3003
       - MICROCONTENT_SERVICE_HOST=microcontent-service
       - MICROCONTENT_SERVICE_PORT=3004
-    ports:
-      - "8080:8080"
     depends_on:
       - course-service
       - gdta-service
@@ -154,6 +150,7 @@ services:
       dockerfile: Dockerfile
     container_name: coursedesign-client
     ports:
+      - "80:3000"
       - "3000:3000"
     depends_on:
       - api-gateway
