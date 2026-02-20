@@ -503,6 +503,10 @@ const GDTAEditor = ({ onSelectElement, onStructureChange, isLoadingSuggestions, 
       else if (tutorialStep === 7 && element.type === 'requirement') {
         setAccordionIndex([]);
       }
+      // Step 10 (index 9): dopo aver cliccato qualsiasi elemento, collassa tutto
+      else if (tutorialStep === 9) {
+        setAccordionIndex([]);
+      }
     }
 
     if (onSelectElement) {

@@ -131,8 +131,10 @@ function App() {
                     transition="all 0.3s"
                     _hover={{ boxShadow: "lg" }}
                   >
-                    <CourseViewer gdtaStructureId={currentGDTAStructureId}
-                    structureVersion={structureVersion} />
+                    <CourseViewer
+                      gdtaStructureId={currentGDTAStructureId}
+                      structureVersion={structureVersion}
+                    />
                   </Box>
                 </GridItem>
               </Grid>

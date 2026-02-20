@@ -33,7 +33,7 @@ import {
   FormLabel,
   Select
 } from '@chakra-ui/react';
-import { DownloadIcon, AddIcon, CloseIcon, DeleteIcon } from '@chakra-ui/icons';
+import { DownloadIcon, AddIcon, CloseIcon, DeleteIcon, TimeIcon } from '@chakra-ui/icons';
 import { FaVideo, FaFileAlt, FaQuestion } from 'react-icons/fa';
 
 const DropTargetSection = ({ section, onAddContent, children }) => {
@@ -196,16 +196,10 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
         title: courseTitle,
         sections: courseSections
       });
-      
+
       setHasUnsavedChanges(false);
-      
-      toast({
-        title: 'Course saved',
-        description: 'Changes have been saved',
-        status: 'success',
-        duration: 2000,
-        isClosable: true,
-      });
+
+      // Toast removed - save is silent
     } catch (error) {
       console.error('Error saving course:', error);
       toast({
@@ -247,15 +241,9 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
       setHasUnsavedChanges(true);
       return newSections;
     });
-    
-    toast({
-      title: 'Content added',
-      description: `"${content.title}" has been added to the section`,
-      status: 'success',
-      duration: 2000,
-      isClosable: true,
-    });
-  }, [toast]);
+
+    // Toast removed - content addition is silent
+  }, []);
   
   const removeContent = useCallback((sectionId, contentId) => {
     setCourseSections(prevSections => {
@@ -488,7 +476,10 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
           <Heading size="md" color="blue.600">Course Viewer</Heading>
           {calculateTotalDuration() && (
             <Badge colorScheme="blue" variant="outline" fontSize="sm" px={3} py={1}>
-              Duration: {calculateTotalDuration()}
+              <HStack spacing={1}>
+                <TimeIcon />
+                <Text>{calculateTotalDuration()}</Text>
+              </HStack>
             </Badge>
           )}
         </HStack>
@@ -501,20 +492,21 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
           )}
         </HStack>
       </HStack>
-      
-      <HStack mb={4} justify="space-between">
-        <Text fontWeight="medium">Course sections</Text>
-        <Button
-          size="sm"
-          colorScheme="blue"
-          leftIcon={<AddIcon />}
-          onClick={onOpen}
-          data-tutorial="new-section"
-        >
-          New Section
-        </Button>
-      </HStack>
-      
+
+      {courseSections.length > 0 && (
+        <HStack mb={4} justify="space-between">
+          <Button
+            size="sm"
+            colorScheme="blue"
+            leftIcon={<AddIcon />}
+            onClick={onOpen}
+            data-tutorial="new-section"
+          >
+            New Section
+          </Button>
+        </HStack>
+      )}
+
       <Accordion allowMultiple defaultIndex={[0]} mb={6}>
         {courseSections.map((section, index) => (
           <AccordionItem
@@ -627,13 +619,14 @@ const CourseViewer = ({ gdtaStructureId, structureVersion }) => {
       
       {courseSections.length === 0 && (
         <Box p={8} bg="gray.50" borderRadius="md" textAlign="center" mb={6}>
-          <Text color="gray.500" mb={3}>
-            No sections present. Start by adding a new section.
+          <Text color="gray.500" mb={3} fontSize="md">
+            Your course is empty. Start by creating your first section!
           </Text>
-          <Button 
-            colorScheme="blue" 
+          <Button
+            colorScheme="blue"
             leftIcon={<AddIcon />}
             onClick={onOpen}
+            data-tutorial="new-section"
           >
             Add First Section
           </Button>
